@@ -14,7 +14,6 @@ app.get('/userform', function (req, res) {
     };
     res.end(JSON.stringify(response));
 });
-
 var uParser = bodyParser.urlencoded({ extended: false })
 app.post('/userform', uParser, function (req, res) {
     const response = {
@@ -23,8 +22,6 @@ app.post('/userform', uParser, function (req, res) {
     };
     res.end(JSON.stringify(response));
 })
-
-
 
 var server = app.listen(3000, 'localhost', function () {
     var host = server.address().address;
